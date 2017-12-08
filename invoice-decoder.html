@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoding Invoice Information</title>
+    <link rel="stylesheet" href="styles/decoding-invoice.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.8.0/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="c-panel">
+        <div class="v-code-container">
+            <span id="v-code-label">Virtual bar code: </span>
+            <input id="v-code-input" type="text" placeholder="Enter the virtual code here">
+        </div>
+        <div class="btn-container">
+            <button id="decode-btn">Decode</button>
+        </div>
+        <div class="btn-container">
+            <button id="hide-btn">Hide</button>
+        </div>
+    </div>
+    <section id="info-section">
+        <div id="left-side">
+            <div id="iban-box">
+                <span id="iban-label">Payee's IBAN:</span><span id="iban-value"></span>
+            </div>
+            <div id="ref-box">
+                <span id="ref-label">Payment reference:</span><span id="ref-value"></span>
+            </div>
+        </div>
+        <div id="right-side">
+            <div id="amnt-box">
+                <span id="amnt-label">Amount to be paid:</span><span id="amnt-value"></span>
+            </div>
+            <div id="date-box">
+                <span id="date-label">Due date:</span><span id="date-value"></span>
+            </div>
+        </div>
+        <div id="bar-code-container">
+            <img id="barcode" />
+        </div>
+    </section>
+    <script src="scripts/decoding-invoice.js"></script>
+</body>
+</html>

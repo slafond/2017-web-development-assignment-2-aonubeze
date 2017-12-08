@@ -1,0 +1,159 @@
+body{
+    margin: auto;
+    height: 80vh;
+}
+
+#info-section{
+    height:60%;
+    width: 80%;
+    margin: 10%;
+    border: 1px solid black;
+}
+
+.c-panel{
+    width: 80%;
+    height: 5%;
+    margin: 3% 10% 10% 10%;
+}
+
+#v-code-container{
+    width: 50%;
+}
+
+#v-code-input{
+    padding: 0.5em 2em;
+    margin: 1em 0;
+    width: 30%;
+}
+
+input:focus{
+    background-color: lightgray;
+}
+
+#v-code-label{
+    font-weight: bold;
+}
+
+#v-code-input{
+    font-style: italic;
+    font-family:cursive;
+}
+
+.btn-container{
+    margin-top: 2em;
+    width: 50%;
+    float: left;
+}
+button:hover{
+    background-color: darkgray;
+    color: ghostwhite;
+}
+
+#decode-btn{
+    padding: 1% 2%;
+    width: 20%;
+    margin-left: 40%
+}
+
+#hide-btn{
+    padding: 1% 2%;
+    width: 20%;
+    margin-left: 40%
+}
+
+#left-side{
+    width: 44%;
+    margin: 1% 3%;
+    float: left;
+}
+
+#right-side{
+    width: 44%;
+    margin: 1% 3%;
+    float: left;
+}
+
+#iban-box{
+    margin: 2% 0;
+    padding: 1% 1%;
+}
+
+#iban-label{
+    font-weight: bold;
+}
+
+#iban-value{
+    font-style:italic;
+    font-family:cursive;
+    margin-left: 3%;
+}
+
+#ref-box{
+    margin: 2% 0;
+    padding: 1% 1%;
+}
+
+#ref-label{
+    font-weight: bold;
+}
+
+#ref-value{
+    font-style:italic;
+    font-family:cursive;
+    margin-left: 3%;
+}
+
+#amnt-box{
+    margin: 2% 0;
+    padding: 1% 1%;
+}
+
+#amnt-label{
+    font-weight: bold;
+}
+
+#amnt-value{
+    font-style:italic;
+    font-family:cursive;
+    margin-left: 3%;
+}
+
+#date-box{
+    margin: 2% 0;
+    padding: 1% 1%;
+}
+
+#date-label{
+    font-weight: bold;
+}
+
+#date-value{
+    font-style:italic;
+    font-family:cursive;
+    margin-left: 3%;
+}
+
+#bar-code-container{
+    clear: left;
+    height: 30%;
+    width: 60%;
+    margin: 20%;
+    padding-top: 1em;
+    text-align: center;
+    background-color:lightgray;
+    border: 2px solid darkblue;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width:800px) {
+    .v-code-container, .btn-container {
+        width:100%;/*The width is 100%, when the viewport is 800px or smaller*/
+    }
+    #right-side, #left-side{
+        width: 94%;
+    }
+}
