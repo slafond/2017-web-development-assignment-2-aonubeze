@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zip Code Location on Map</title>
+    <link rel="stylesheet" href="styles/zip-code-location.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt392AXQ9i852y2PGnJQXY5AGplsT-owU"></script>
+</head>
+<body>
+    <div class="container">
+        <section class="top">
+            <div class="left-panel">
+                <div id="country-container">
+                    <span id="country-label">Select your country</span>
+                    <select name="country" id="country-select">
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IT">Italy</option>
+                        <option value="NO">Norway</option>
+                        <option value="SE">Sweden</option>
+                    </select>
+                </div>
+                <div id="zip-container">
+                    <span id="zip-label">ZIP code</span>
+                    <input type="text" id="zip-input">
+                </div>
+                <div id="search-btn-container">
+                    <button id="search">Search</button>
+                </div>
+            </div>
+            <div class="right-panel">
+                <table id="history-table">
+                    <thead>
+                    <tr><th>History of the last 10 searches</th></tr>
+                    </thead>
+                    <tr>
+                        <td id="hist-0"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-1"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-2"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-3"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-4"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-5"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-6"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-7"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-8"></td>
+                    </tr>
+                    <tr>
+                        <td id="hist-9"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="middle">
+            <div id="places"></div>
+        </section>
+        <section class="bottom" id="map">
+        </section>
+    </div>
+
+    <script src="scripts/zip-code-location.js"></script>
+</body>
+</html>
