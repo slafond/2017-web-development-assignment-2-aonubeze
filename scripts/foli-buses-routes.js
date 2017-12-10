@@ -8,7 +8,7 @@ function drawMap(data) {
 }
 
 $(document).ready(function(){
-    $.getJSON("http://data.foli.fi/gtfs/routes", function(res){
+    $.getJSON("https://data.foli.fi/gtfs/routes", function(res){
         var busLines = res.map(function(route){
             return {route_id: route.route_id, route_name: route.route_long_name};
         });
