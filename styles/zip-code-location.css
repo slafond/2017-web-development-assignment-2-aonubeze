@@ -9,13 +9,30 @@ body{
 }
 
 .top{
-    height: 30%;
+    height: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .middle{
-    height: 20%;
+    height: 250px;
     width: 80%;
-    margin: 5% 10% 5% 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
     clear: left;
+    overflow-y: auto;
+}
+
+.bottom{
+    height: 300px;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 table{
@@ -47,12 +64,6 @@ th, tr{
     background-color: lightgray;
 }
 
-.bottom{
-    height: 300px;
-    width: 80%;
-    margin: 5% 10% 0 10%;
-}
-
 .left-panel{
     width: 50%;
     float: left;
@@ -75,10 +86,12 @@ th, tr{
 }
 
 .right-panel{
+    height: 200px;
     width: 39%;
     margin-left: 10%;
     float: left;
     border: 1px solid lightgray;
+    overflow-y: auto;
 }
 
 @media (max-width:800px) {
@@ -87,6 +100,10 @@ th, tr{
     }
     .right-panel{
         margin-left: 0;
+        height: 100px;
+    }
+    .bottom{
+        height: 150px;
     }
 }
 

@@ -1,18 +1,35 @@
 var hist = getStoredHistory();
-const countries = {
-    FI: "Finland", FR: "France", DE: "Germany", IS: "Iceland", IT: "Italy", NO: "Norway", SE: "Sweden"
-};
+const maxHistorySize = 10;
+const countries = [
+    {code: "FI", name: "Finland"},
+    {code: "FR", name: "France"},
+    {code: "DE", name: "Germany"},
+    {code: "IS", name: "Iceland"},
+    {code: "IT", name: "Italy"},
+    {code: "NO", name: "Norway"},
+    {code: "SE", name: "Sweden"}
+];
 
 $(document).ready(function(){
+    for (var i = 0; i < maxHistorySize; i++) {
+        $("#history-table").append(
+            "<tr><td>" + "</td></tr>"
+        );
+    }
+    $.each(countries, function(i, country){
+        $("#country-select").append("<option " + "value=" + "'" + country.code + "'" + ">" + country.name + "</option>");
+    });
     updateHistory(null);
     $("#search").click(function(){
+        var sel = $("#country-select");
         var zip = $("#zip-input").val().trim();
-        var country = $("#country-select").val().trim();
-        if(!zip || !country)
+        var name = $("#country-select option:selected").text().trim();
+        var code = sel.val().trim();
+        if(!zip || !code)
             return;
-        $.getJSON("http://api.zippopotam.us/" + country + "/" + zip, function(res){
+        $.getJSON("http://api.zippopotam.us/" + code + "/" + zip, function(res){
             displayPlaces(res.places);
-            updateHistory({"code": country, "country": countries[country], "zip": zip});
+            updateHistory({"code": code, "name": name, "zip": zip});
             setMap(res.places);
         });
     });
@@ -20,11 +37,14 @@ $(document).ready(function(){
     $(document).click(function(event){
         var d = $(event.target)[0].innerHTML.split(" ");
         if(d.length === 3){
-            var country = d[0].trim();
+            var name = d[1].trim();
+            var country = {code: d[0].trim(), name: name.substring(0, name.length-1)};
             var zip = d[2].trim();
-            var c = Object.keys(countries);
-            if(c.includes(country) && zip){
-                $.getJSON("http://api.zippopotam.us/" + country + "/" + zip, function(res){
+            var valid = countries.find(function(c){
+                return c.code === country.code && c.name === country.name;
+            });
+            if(valid && zip){
+                $.getJSON("http://api.zippopotam.us/" + country.code + "/" + zip, function(res){
                     displayPlaces(res.places);
                     setMap(res.places);
                 });
@@ -43,7 +63,7 @@ function updateHistory (data) {
     }
     var t = $("#history-table");
     for (var i = 0; i < hist.length; i++) {
-        t[0].children[1].children[i].innerHTML = hist[i].code + " " + hist[i].country + ": " + hist[i].zip;
+        t[0].children[i+1].children[0].innerHTML = hist[i].code + " " + hist[i].name + ": " + hist[i].zip;
     }
 }
 
