@@ -1,0 +1,42 @@
+body{
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh 10vw;
+}
+
+.top, .middle, .bottom {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.bottom{
+    border: 2px solid black;
+    height: 500px;
+}
+
+.control-btn{
+    width: 10%;
+    padding: 2px;
+}
+
+#show-route{
+    margin-left: 36%;
+}
+
+#refresh{
+    margin-left: 33%;
+}
+
+@media (max-width:800px) {
+    .control-btn{
+        width:100%;/*The width is 100%, when the viewport is 800px or smaller*/
+    }
+
+    .bottom{
+        height: 250px;
+    }
+
+    #show-route, #show-buses, #refresh{
+        margin: 5px 0;
+    }
+}

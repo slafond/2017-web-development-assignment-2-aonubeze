@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foli Buses Routes</title>
+    <link rel="stylesheet" href="styles/foli-buses-routes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt392AXQ9i852y2PGnJQXY5AGplsT-owU"></script>
+</head>
+<body>
+<div class="top">
+    <span id="bus-line-label">Select the bus line:</span>
+    <select name="bus-line" id="bus-line-sel"></select>
+</div>
+<div class="middle">
+    <button class="control-btn" id="show-buses">Show buses</button>
+    <button class="control-btn" id="refresh">refresh</button>
+    <button class="control-btn" id="show-route">Show route</button>
+</div>
+<div class="bottom" id="map"></div>
+<script src="scripts/foli-buses-routes.js"></script>
+</body>
+</html>
