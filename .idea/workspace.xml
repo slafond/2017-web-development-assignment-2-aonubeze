@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79144ace-ac6f-4111-81b0-d4b4d62cc40b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/foli-buses-routes.js" afterPath="$PROJECT_DIR$/scripts/foli-buses-routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/zip-code-location.css" afterPath="$PROJECT_DIR$/styles/zip-code-location.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,23 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zip-code-location.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="zip-code-location.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/zip-code-location.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-              <folding>
-                <marker date="1512942266874" expanded="true" signature="903:921" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foli-buses-routes.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/foli-buses-routes.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="380">
+              <caret line="104" column="8" lean-forward="false" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -68,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="foli-buses-routes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="foli-buses-routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/foli-buses-routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+            <state relative-caret-position="1029">
+              <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -111,10 +99,10 @@
         <option value="$PROJECT_DIR$/scripts/decoding-invoice.js" />
         <option value="$PROJECT_DIR$/zip-code-location.html" />
         <option value="$PROJECT_DIR$/scripts/zip-code-location.js" />
-        <option value="$PROJECT_DIR$/styles/zip-code-location.css" />
         <option value="$PROJECT_DIR$/styles/foli-buses-routes.css" />
         <option value="$PROJECT_DIR$/foli-buses-routes.html" />
         <option value="$PROJECT_DIR$/scripts/foli-buses-routes.js" />
+        <option value="$PROJECT_DIR$/styles/zip-code-location.css" />
       </list>
     </option>
   </component>
@@ -198,6 +186,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="79144ace-ac6f-4111-81b0-d4b4d62cc40b" name="Default" comment="" />
@@ -212,7 +203,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62901000" />
+    <option name="totallyTimeSpent" value="63156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -339,9 +330,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="94" column="23" lean-forward="false" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-          <folding>
-            <marker date="1512942266874" expanded="true" signature="903:921" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -425,28 +414,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/zip-code-location.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <marker date="1512942266874" expanded="true" signature="903:921" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zip-code-location.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="111" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foli-buses-routes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -466,8 +437,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/foli-buses-routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        <state relative-caret-position="1029">
+          <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foli-buses-routes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/zip-code-location.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="104" column="8" lean-forward="false" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
           <folding />
         </state>
       </provider>

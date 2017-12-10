@@ -103,11 +103,7 @@ th, tr{
 }
 
 #search{
-<<<<<<< HEAD
     width: 50%;
-=======
-    width: 20%;
->>>>>>> 5d5a50e63be67b5cf2d0e4f0d61fe7d2a2097552
 }
 
 @media (max-width:800px) {
