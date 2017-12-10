@@ -1,4 +1,5 @@
 const turku_lat_long = {latitude: 60.45, longitude: 22.2833};
+var _map;
 function drawMap(data) {
     return new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
@@ -8,12 +9,13 @@ function drawMap(data) {
 }
 
 $(document).ready(function(){
+    var busLines;
     $.getJSON("https://data.foli.fi/gtfs/routes", function(res){
-        var busLines = res.map(function(route){
-            return {route_id: route.route_id, route_name: route.route_long_name};
+        busLines = res.map(function(route){
+            return {route_id: route.route_id, route_name: route.route_long_name, route_ref: route.route_short_name};
         });
         $.each(busLines, function(i, route){
-            $("#bus-line-sel").append("<option " + "value=" + "'" + route.route_id + "'" + ">" + route.route_name + "</option>");
+            $("#bus-line-sel").append("<option " + "value=" + "'" + route.route_id + "'" + ">" + route.route_ref + ": " + route.route_name + "</option>");
         });
     });
     drawMap(turku_lat_long);
@@ -24,9 +26,15 @@ $(document).ready(function(){
         }
     });
     $("#show-buses").click(function(){
-        var route_id = Number($("#bus-line-sel").val().trim());
-        if(route_id){
-            showBusesLocation(route_id);
+        var route = $("#bus-line-sel option:selected").text().split(":")[0].trim();
+        if(route){
+            showBusesLocation(route);
+        }
+    });
+    $("#refresh").click(function(){
+        var route = $("#bus-line-sel option:selected").text().split(":")[0].trim();
+        if(route){
+            showBusesLocation(route);
         }
     });
 });
@@ -39,11 +47,18 @@ function showBusesLocation(route_id){
         var vehicles = vm.result.vehicles;
         var vehicleIds = Object.keys(vehicles);
         var vehiclesInRoute = vehicleIds.filter(function(v_id){
-            console.log(vehicles[v_id].publishedlinename);
-            console.log("route_id: " + route_id);
             return vehicles[v_id].publishedlinename === route_id;
         });
         console.log(vehiclesInRoute);
+        vehiclesInRoute.forEach(function(v){
+            var bus = vehicles[v];
+            var myLatlng = new google.maps.LatLng(bus.latitude,bus.longitude);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                title: v
+            });
+            marker.setMap(_map);
+        })
     })
 }
 
@@ -63,6 +78,7 @@ function showRoute(route_id){
                 strokeOpacity: 1.0,
                 strokeWeight: 2
             });
+            _map = map;
             busPath.setMap(map);
         });
     });
