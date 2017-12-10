@@ -27,7 +27,7 @@ $(document).ready(function(){
         var code = sel.val().trim();
         if(!zip || !code)
             return;
-        $.getJSON("http://api.zippopotam.us/" + code + "/" + zip, function(res){
+        $.getJSON("https://api.zippopotam.us/" + code + "/" + zip, function(res){
             displayPlaces(res.places);
             updateHistory({"code": code, "name": name, "zip": zip});
             setMap(res.places);
@@ -44,7 +44,7 @@ $(document).ready(function(){
                 return c.code === country.code && c.name === country.name;
             });
             if(valid && zip){
-                $.getJSON("http://api.zippopotam.us/" + country.code + "/" + zip, function(res){
+                $.getJSON("https://api.zippopotam.us/" + country.code + "/" + zip, function(res){
                     displayPlaces(res.places);
                     setMap(res.places);
                 });
