@@ -10,7 +10,7 @@ function drawMap(data) {
 
 $(document).ready(function(){
     var busLines;
-    $.getJSON("https://data.foli.fi/gtfs/routes", function(res){
+    $.getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/routes", function(res){
         busLines = res.map(function(route){
             return {route_id: route.route_id, route_name: route.route_long_name, route_ref: route.route_short_name};
         });
