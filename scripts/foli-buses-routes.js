@@ -40,7 +40,7 @@ $(document).ready(function(){
 });
 
 function showBusesLocation(route_id){
-    $.getJSON("https://data.foli.fi/siri/vm/pretty", function(vm){
+    $.getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/siri/vm/pretty", function(vm){
         if(vm.status !== "OK"){
             alert("Data not ready, try again");
         }
@@ -49,7 +49,6 @@ function showBusesLocation(route_id){
         var vehiclesInRoute = vehicleIds.filter(function(v_id){
             return vehicles[v_id].publishedlinename === route_id;
         });
-        console.log(vehiclesInRoute);
         vehiclesInRoute.forEach(function(v){
             var bus = vehicles[v];
             var myLatlng = new google.maps.LatLng(bus.latitude,bus.longitude);
@@ -63,10 +62,10 @@ function showBusesLocation(route_id){
 }
 
 function showRoute(route_id){
-    $.getJSON("https://data.foli.fi/gtfs/v0/20171130-162538/trips/route/"+route_id, function(trips){
+    $.getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/v0/20171130-162538/trips/route/"+route_id, function(trips){
         var index = Math.floor((Math.random() * trips.length) + 1);
         var shape_id = trips[index].shape_id;
-        $.getJSON("https://data.foli.fi/gtfs/v0/20171130-162538/shapes/"+shape_id, function(shape){
+        $.getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/v0/20171130-162538/shapes/"+shape_id, function(shape){
             var pathCoordinates = shape.map(function(line){
                 return {lat: line.lat, lng: line.lon};
             });
