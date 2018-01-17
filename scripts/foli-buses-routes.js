@@ -12,7 +12,7 @@ function drawMap(data) {
 
 $(document).ready(function(){
     var busLines;
-    getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/routes")
+    getJSON("https://cors-anywhere.herokuapp.com/https://data.foli.fi/gtfs/routes")
         .then(function(res){
             busLines = res.map(function(route){
                 return {route_id: route.route_id, route_name: route.route_long_name, route_ref: route.route_short_name};
@@ -45,7 +45,7 @@ $(document).ready(function(){
 });
 
 function showBusesLocation(route_id){
-    getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/siri/vm/pretty")
+    getJSON("https://cors-anywhere.herokuapp.com/https://data.foli.fi/siri/vm/pretty")
         .then(function(vm){
             var vehicles = vm.result.vehicles;
             var vehicleIds = Object.keys(vehicles);
@@ -74,13 +74,13 @@ function showBusesLocation(route_id){
 
 
 function showRoute(route_id){
-    getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/v0/20180117-130104/trips/route/"+route_id)
+    getJSON("https://cors-anywhere.herokuapp.com/https://data.foli.fi/gtfs/v0/20180117-130104/trips/route/"+route_id)
         .then(function(data){
             var index = Math.floor((Math.random() * data.length) + 1);
             return data[index].shape_id;
         })
         .then(function(shape_id){
-            getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/v0/220180117-130104/shapes/"+shape_id)
+            getJSON("https://cors-anywhere.herokuapp.com/https://data.foli.fi/gtfs/v0/220180117-130104/shapes/"+shape_id)
                 .then(function(shape){
                     var pathCoordinates = shape.map(function(line){
                         return {lat: line.lat, lng: line.lon};
